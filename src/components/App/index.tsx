@@ -20,7 +20,7 @@ class AppComponent extends React.Component {
     };
   }
 
-  public componentDidMount() {
+  componentDidMount() {
     firebase.auth.onAuthStateChanged(authUser => {
       authUser
         ? this.setState(() => ({ authUser }))
@@ -28,7 +28,7 @@ class AppComponent extends React.Component {
     });
   }
 
-  public render() {
+  render() {
     return (
       <BrowserRouter>
         <div>

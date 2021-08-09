@@ -33,7 +33,7 @@ export class PasswordChangeForm extends React.Component<
     this.state = { ...PasswordChangeForm.INITIAL_STATE };
   }
 
-  public onSubmit = (event: any) => {
+  onSubmit = (event: any) => {
     const { passwordOne }: any = this.state;
 
     auth
@@ -48,7 +48,7 @@ export class PasswordChangeForm extends React.Component<
     event.preventDefault();
   };
 
-  public render() {
+  render() {
     const { passwordOne, passwordTwo, error }: any = this.state;
 
     const isInvalid = passwordOne !== passwordTwo || passwordOne === "";

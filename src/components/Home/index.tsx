@@ -7,13 +7,13 @@ import { withAuthorization } from "../Session/withAuthorization";
 import { UserList } from "./UserList";
 
 class HomeComponent extends React.Component {
-  public componentDidMount() {
+  componentDidMount() {
     const { onSetUsers }: any = this.props;
 
     db.onceGetUsers().then(snapshot => onSetUsers(snapshot.val()));
   }
 
-  public render() {
+  render() {
     const { users }: any = this.props;
 
     return (

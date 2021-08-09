@@ -9,7 +9,7 @@ export class UserList extends React.Component<InterfaceProps, {}> {
     super(props);
   }
 
-  public render() {
+  render() {
     const { users }: any = this.props;
 
     return (

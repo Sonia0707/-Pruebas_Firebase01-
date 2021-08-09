@@ -40,7 +40,7 @@ export class SignUpForm extends React.Component<
     this.state = { ...SignUpForm.INITIAL_STATE };
   }
 
-  public onSubmit(event: any) {
+  onSubmit(event: any) {
     event.preventDefault();
 
     const { email, passwordOne, username } = this.state;
@@ -66,7 +66,7 @@ export class SignUpForm extends React.Component<
       });
   }
 
-  public render() {
+  render() {
     const { username, email, passwordOne, passwordTwo, error } = this.state;
 
     const isInvalid =

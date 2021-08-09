@@ -15,7 +15,7 @@ export const withAuthentication = (Component: any) => {
     InterfaceProps,
     InterfaceState
   > {
-    public componentDidMount() {
+    componentDidMount() {
       const { onSetAuthUser }: any = this.props;
 
       firebase.auth.onAuthStateChanged(authUser => {
@@ -23,7 +23,7 @@ export const withAuthentication = (Component: any) => {
       });
     }
 
-    public render() {
+    render() {
       return <Component />;
     }
   }

@@ -17,7 +17,7 @@ export class PasswordForgetForm extends React.Component {
     this.state = { ...PasswordForgetForm.INITIAL_STATE };
   }
 
-  public onSubmit = (event: any) => {
+  onSubmit = (event: any) => {
     const { email }: any = this.state;
 
     auth
@@ -32,7 +32,7 @@ export class PasswordForgetForm extends React.Component {
     event.preventDefault();
   };
 
-  public render() {
+  render() {
     const { email, error }: any = this.state;
     const isInvalid = email === "";
 

@@ -35,7 +35,7 @@ export class SignInForm extends React.Component<
     this.state = { ...SignInForm.INITIAL_STATE };
   }
 
-  public onSubmit = (event: any) => {
+  onSubmit = (event: any) => {
     const { email, password } = this.state;
 
     const { history } = this.props;
@@ -53,7 +53,7 @@ export class SignInForm extends React.Component<
     event.preventDefault();
   };
 
-  public render() {
+  render() {
     const { email, password, error } = this.state;
 
     const isInvalid = password === "" || email === "";
